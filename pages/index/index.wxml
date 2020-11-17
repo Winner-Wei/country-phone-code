@@ -1,13 +1,20 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="out_container">
+    <view class="ind_container">
+        <view class="commeon_css tel_input">
+            <view class="tel_left" style="display: flex;min-width: 15%;margin-right: 25rpx;" bindtap="choosePhoneCode">
+                <view style="font-size: 30rpx;margin-top: 2rpx;">+{{phoneCode}}</view>
+                <view class="arrow_down"></view>
+            </view>
+            <view class="tel_right" style="width: 100%;">
+                <input class="input" placeholder="请输入手机号" type="number" maxlength="11" value="{{telPhone}}" bindinput="getTelValue"/>
+            </view>
+        </view>
+        <view class="commeon_css code_input">
+            <view class="left" style="font-size: 30rpx;">密码</view>
+            <view class="right get_code">
+                <view style="flex: 1;"><input class="input" placeholder="请输入密码" type="number" maxlength="8" value="{{verifyCode}}" bindinput="getCodeValue"/></view>
+            </view>
+        </view>
+    </view>
+    <view class="sub_btn" style="opacity: .5" bindtap="submitData">提交</view>
 </view>

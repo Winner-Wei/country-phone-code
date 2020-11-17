@@ -1,21 +1,57 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.out_container {
+    position: fixed;
+    left: 0rpx;
+    top: 0rpx;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.arrow_down {
+    position: relative;
+    left: 10rpx;
+    top: 20rpx;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 10rpx;
+    border-color: #6981FF transparent transparent transparent;
+    border-style: dotted dotted solid dotted;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.input {
+    font-size: 30rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.out_container .ind_container {
+    width: 640rpx;
+    margin: 0 auto;
+    margin-top: 26rpx;
+}
+.ind_container .commeon_css{
+    display: flex;
+    width: 100%;
+    padding: 84rpx 0rpx 30rpx 0rpx;
+    border-bottom: 2rpx solid #F2F2F2;
+}
+.ind_container .left {
+    width: 20%;
+}
+.ind_container .right {
+    width: 80%;
+}
+.code_input .get_code {
+    display: flex;
+    justify-content: space-between;
+}
+.get_code .code_txt {
+    font-size: 28rpx;
+}
+.out_container .sub_btn {
+    width: 686rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 80rpx;
+    border-radius: 40rpx;
+    background: #6981FF;
+    color: #fff;
 }

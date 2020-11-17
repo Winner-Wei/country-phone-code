@@ -1,0 +1,19 @@
+<view class="wrap_container">
+    <view class="to_top title" wx:if="{{topVal}}">{{topVal === 'hot' ? '热门国家或地区' : topVal}}</view>
+    <scroll-view scroll-y="true" style="height: 100vh;" scroll-into-view="{{intoPosition}}" scroll-with-animation="true" bindscroll="handleScroll">
+        <view wx:for="{{countryCodeList}}" wx:key="index" id="{{item.key}}" class="every_content">
+            <view class="title" id="title" data-key="{{item.key}}">{{item.key === 'hot' ? '热门国家或地区' : item.key}}</view>
+            <view class="out_content">
+                <view class="ind_content" wx:for="{{item.data}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1" data-code="{{item1.phoneCode}}" bindtap="backInputPhone">
+                    <view class="left_tit">{{item1.countryName}}</view>
+                    <view class="right_tit">+{{item1.phoneCode}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="code_right">
+        <view wx:for="{{allCode}}" wx:key="index" class="every_code" data-info="{{item + '-' + index}}" bindtap="jumpItemPosition" style="color: {{index == clickIndex ? '#f00' : '#6981FF'}}">
+            {{item === 'hot' ? '热门' : item}}
+        </view>
+    </view>
+</view>
