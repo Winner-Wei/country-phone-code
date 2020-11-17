@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.tpl": "html",
-        "*.cjson": "jsonc",
-        "*.wxss": "css",
-        "*.wxs": "javascript",
-        "*.wxml": "html"
-    }
-}
